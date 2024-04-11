@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="calci.js" defer></script>
+    <style>
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        font-size: 15px;
+        color: green;
+        font-weight: 600;
+      }
+      button {
+        background-color: bisque;
+        border-radius: 10pt;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+      }
+      .main {
+        border: 1px solid #ddd;
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+        text-align: center;
+        box-shadow:
+  3px 3px #d3a611 inset,
+  -1em 0 0.4em rgb(27, 136, 214);
+      }
+    </style>
+</head>
+<div class="main">
+  <h1>Calculator</h1>
+<form onsubmit="event.preventDefault();">
+  <label>Number 1</label> <input type="text" name="no1" id="no1" /><br />
+  <label>Number2</label> <input type="text" name="no2" id="no2" /><br /><br/>
+
+   Select Type <select class="typeCalcu">
+    <option value="add">Addition</option>
+    <option value="sub">Substract</option>
+    <option value="mul">Multiplication</option>
+    <option value="divd">Division</option>
+   </select>
+  <button type="submit" onclick="calculate()" >Calculate</button>
+
+</form>
+-----------------------------------------------------------------------
+<div>
+  <p>Answer</p>&nbsp;<h6 id="sumid" style="color: red; font-size: 20px;"></h6>
+</div>
+</div>
+</body>
+</html>
